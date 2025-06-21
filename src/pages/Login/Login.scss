@@ -1,0 +1,19 @@
+@import '../../styles/var';
+
+.login-button {
+    width: 100%;
+    padding: 25px 15px;
+    font-weight: bold;
+}
+
+.lost-pwd {
+    border: none;
+    width: 100%;
+    box-shadow: none;
+    font-weight: bold;
+    color: $main-color;
+
+    & a {
+        text-decoration: underline;
+    }
+}
