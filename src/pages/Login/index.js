@@ -4,8 +4,8 @@ import { Row, Col, Input, Button, Form } from 'antd';
 import { setCookie } from '../../helpers/cookie';
 
 const dataSampleLogin = {
-    username: 'nghiemtuananh2004@gmail.com',
-    password: 'abcabc'
+    username: 'newuser8@example.com',
+    password: 'securepassword'
 }
 
 export default function Login() {
