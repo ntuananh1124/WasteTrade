@@ -10,7 +10,7 @@ export default function Registration() {
             <div className="registration">
                 <div className="registration__ques">
                     <span>Do you have a WasteTrade account?</span>
-                    <Link to="/login"> Login?</Link>
+                    <Link to="/account/login"> Login?</Link>
                 </div>
                 <div className="registration__form">
                     <div className="registration__register">

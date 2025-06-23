@@ -1,0 +1,89 @@
+@import '../../styles/var';
+@import '../../styles/mixins';
+@import '../../styles/style';
+
+.header {
+    background-color: white;
+    padding: 15px 60px;
+    margin: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    &__main {
+        @include d-flex();
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        &__nav {
+            cursor: pointer;
+            & svg {
+                width: 50px !important;
+            }
+        }
+
+        &__nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo {
+            width: 150px;
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__user {
+            position: relative;
+            &-noti {
+                @include d-flex();
+                gap: 40px;
+                align-items: center;
+            }
+
+            &__content {
+                @include d-flex();
+                align-items: center;
+                gap: 10px;
+
+                &__arrow {
+                    & svg {
+                        fill: $main-color;
+                    }
+                }
+            }
+        }
+
+        &__buy-sell-want ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        &__noti {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid rgb(130, 130, 130);
+            @include flex-center();
+        }
+
+        &__dropdown {
+            display: none;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px;
+            top: 99%;
+
+            &__auth {
+                @include d-flex();
+                gap: 15px;
+            }
+        }
+    }
+}

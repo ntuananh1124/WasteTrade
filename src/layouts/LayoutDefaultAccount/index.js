@@ -1,13 +1,15 @@
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
 import WTLogo from "../../images/logo.png";
-import './LayoutDefault.scss';
+import './LayoutDefaultAccount.scss';
 
-export default function LayoutDefault() {
+export default function LayoutDefaultAccount() {
     return (
         <div className="page-wrapper">
-            <header className="header my-container">
-                <div className="header-img">
-                    <img src={WTLogo} alt="" />
+            <header className="header-acc my-container">
+                <div className="header-acc-img">
+                    <Link to='/'>
+                        <img src={WTLogo} alt="" />
+                    </Link>
                 </div>
             </header>
 

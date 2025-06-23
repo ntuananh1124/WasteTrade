@@ -8,13 +8,13 @@ export default function Home() {
 
     const handleLogOut = () => {
         deleteAllCookies();
-        navigate('/login');
+        navigate('/account/login');
     };
 
     return (
         <>
             <div>Home</div>
-            <Link to='/registration'>Registration</Link>
+            <Link to='/account/registration'>Registration</Link>
             {username && <>
                 <div>Hi {username}</div>
                 <Button onClick={handleLogOut}>Log Out</Button>

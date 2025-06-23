@@ -11,7 +11,7 @@ const dataSampleLogin = {
 export default function Login() {
     const navigate = useNavigate();
     const handleFinish = (data) => {
-        console.log(data);
+        // console.log(data);
         if (dataSampleLogin && data) {
             if (data.username === dataSampleLogin.username && data.password === dataSampleLogin.password) {
                 alert('LOGIN SUCCESSFULLY!');
@@ -26,7 +26,7 @@ export default function Login() {
             <div className="registration">
                 <div className="registration__ques">
                     <span>Need a WasteTrade account?</span>
-                    <Link to="/registration"> Create an account?</Link>
+                    <Link to="/account/registration"> Create an account?</Link>
                 </div>
                 <div className="registration__form">
                     <div className="registration__register">
@@ -62,7 +62,7 @@ export default function Login() {
                                     </Col>
                                     <Col span={24}>
                                         <Button className="lost-pwd">
-                                            <Link to='/forgot-password'>LOST YOUR PASSWORD?</Link>
+                                            <Link to='/account/forgot-password'>LOST YOUR PASSWORD?</Link>
                                         </Button>
                                     </Col>
                                 </Row>
