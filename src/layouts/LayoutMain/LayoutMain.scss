@@ -87,3 +87,12 @@
         }
     }
 }
+
+.menu-style {
+    width: 256px;
+    position: absolute;
+    top: 160%;
+    transition: .3s ease;
+    left: -60px;
+    z-index: 100;
+}

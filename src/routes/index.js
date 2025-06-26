@@ -8,6 +8,7 @@ import SetPassword from "../pages/SetPassword";
 import ForgotPassword from "../pages/ForgotPassword";
 import LayoutDefaultAccount from "../layouts/LayoutDefaultAccount";
 import LayoutMain from "../layouts/LayoutMain";
+import Marketplace from "../pages/Marketplace";
 
 export const routes = [
     {
@@ -17,6 +18,10 @@ export const routes = [
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path: 'marketplace',
+                element: <Marketplace />
             }
         ]
     },
