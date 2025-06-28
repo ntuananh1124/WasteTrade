@@ -3,7 +3,6 @@ import LayoutAdmin from "../layouts/LayoutAdmin";
 import Registration from "../pages/Registration";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
-import LogOut from "../components/LogOut";
 import SetPassword from "../pages/SetPassword";
 import ForgotPassword from "../pages/ForgotPassword";
 import LayoutDefaultAccount from "../layouts/LayoutDefaultAccount";
@@ -37,10 +36,6 @@ export const routes = [
                 index: 'true',
                 path: 'login',
                 element: <Login />
-            },
-            {
-                path: 'log-out',
-                element: <LogOut />
             },
             {
                 path: 'set-password',

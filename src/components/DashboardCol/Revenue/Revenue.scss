@@ -1,0 +1,60 @@
+@import '../../../styles/var';
+
+.revenue-main {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &__see-all {
+            color: $main-color;
+            text-decoration: underline;
+
+            & a {
+                color: $main-color !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    } 
+
+    &__content {
+        margin-top: 20px;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            background-color: $main-color;
+            border-radius: $radius;
+            height: 100%;
+
+            &__price {
+                font-size: 25px;
+            }
+
+            &__text {
+                font-size: 15px;
+            }
+        }
+
+        &__right {
+            border-radius: $radius;
+            border: 1px solid $main-color;
+            padding: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+    }
+}
+
+:where(.css-dev-only-do-not-override-16qb6o5).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-16qb6o5).ant-table-wrapper .ant-table-thead >tr>td {
+    background: none !important;
+    border-bottom: none !important;
+}
+
+:where(.css-dev-only-do-not-override-16qb6o5).ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before, :where(.css-dev-only-do-not-override-16qb6o5).ant-table-wrapper .ant-table-thead >tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
+    width: 0 !important;
+}

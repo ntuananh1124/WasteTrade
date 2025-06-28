@@ -1,24 +1,37 @@
-import { Link, useNavigate } from "react-router";
-import { deleteAllCookies, getCookie } from "../../helpers/cookie";
-import { Button } from "antd";
+import { Col, Row } from "antd";
+import { getCookie } from "../../helpers/cookie";
+import './Home.scss';
+import Revenue from "../../components/DashboardCol/Revenue";
+import MySites from "../../components/DashboardCol/MySites";
+import MyOffers from "../../components/DashboardCol/MyOffers";
+import MyOffersPerformance from "../../components/DashboardCol/MyOffersPerformance";
 
 export default function Home() {
     const username = getCookie('username');
-    const navigate = useNavigate();
-
-    const handleLogOut = () => {
-        deleteAllCookies();
-        navigate('/account/login');
-    };
 
     return (
         <>
-            <div>Home</div>
-            <Link to='/account/registration'>Registration</Link>
-            {username && <>
-                <div>Hi {username}</div>
-                <Button onClick={handleLogOut}>Log Out</Button>
-            </>}
+            {username && 
+            <div className="hello">
+                <h4><b>Hi {username}!</b></h4>
+                <span>WasteTrade</span>
+            </div>}
+            <div className="dashboard-main">
+                <Row gutter={[40, 40]}>
+                    <Col span={16}>
+                        <Revenue />
+                    </Col>
+                    <Col span={8}>
+                        <MySites />
+                    </Col>
+                    <Col span={10}>
+                        <MyOffersPerformance />
+                    </Col>
+                    <Col span={14}>
+                        <MyOffers />
+                    </Col>
+                </Row>
+            </div>
         </>
     )
 }

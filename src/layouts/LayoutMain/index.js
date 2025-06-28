@@ -8,7 +8,9 @@ import { Avatar, Breadcrumb, Button, Layout, Menu, theme } from "antd";
 import { IoMdArrowDropdown, IoIosNotifications, IoIosCreate } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { deleteAllCookies, getCookie } from "../../helpers/cookie";
-import { MdOutlineDashboard } from "react-icons/md";
+import { MdOutlineDashboard, MdOutlineAddLocation } from "react-icons/md";
+import { RiFileList2Fill, RiListIndefinite } from "react-icons/ri";
+import { FaLocationDot } from "react-icons/fa6";
 const { Content, Footer, Sider } = Layout;
 
 export default function LayoutMain() {
@@ -56,28 +58,28 @@ export default function LayoutMain() {
         },
         {
             key: '5',
-            icon: <IoIosCreate />,
+            icon: <RiFileList2Fill />,
             label: (
                 <NavLink to='/marketplace'>My Listing</NavLink>
             ),
         },
         {
             key: '6',
-            icon: <IoIosCreate />,
+            icon: <RiListIndefinite />,
             label: (
                 <NavLink to='/marketplace'>My Offers</NavLink>
             ),
         },
         {
             key: '7',
-            icon: <IoIosCreate />,
+            icon: <FaLocationDot />,
             label: (
                 <NavLink to='/marketplace'>My Sites</NavLink>
             ),
         },
         {
             key: '8',
-            icon: <IoIosCreate />,
+            icon: <MdOutlineAddLocation />,
             label: (
                 <NavLink to='/marketplace'>Add Sites</NavLink>
             ),

@@ -1,0 +1,8 @@
+@import '../../styles/var';
+
+.hello {
+    margin-bottom: 20px;
+    & span {
+        color: $main-color;
+    }
+}
