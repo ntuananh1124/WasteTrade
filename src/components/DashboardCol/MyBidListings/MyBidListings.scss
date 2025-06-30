@@ -1,0 +1,29 @@
+@import '../../../styles/var';
+
+.my-bids-main {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &__see-all {
+            color: $main-color;
+            text-decoration: underline;
+
+            & a {
+                color: $main-color !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    } 
+
+    &__content {
+        border-radius: $radius;
+        border: 1px solid $main-color;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+}

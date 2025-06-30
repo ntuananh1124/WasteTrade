@@ -5,6 +5,9 @@ import Revenue from "../../components/DashboardCol/Revenue";
 import MySites from "../../components/DashboardCol/MySites";
 import MyOffers from "../../components/DashboardCol/MyOffers";
 import MyOffersPerformance from "../../components/DashboardCol/MyOffersPerformance";
+import MyBiddingPerformance from "../../components/DashboardCol/MyBiddingPerformance";
+import MyBidListings from "../../components/DashboardCol/MyBidListings";
+import MaterialOfInterest from "../../components/DashboardCol/MaterialOfInterest";
 
 export default function Home() {
     const username = getCookie('username');
@@ -29,6 +32,15 @@ export default function Home() {
                     </Col>
                     <Col span={14}>
                         <MyOffers />
+                    </Col>
+                    <Col span={10}>
+                        <MyBiddingPerformance />
+                    </Col>
+                    <Col span={14}>
+                        <MyBidListings />
+                    </Col>
+                    <Col span={24}>
+                        <MaterialOfInterest />
                     </Col>
                 </Row>
             </div>

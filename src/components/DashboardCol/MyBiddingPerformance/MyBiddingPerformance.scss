@@ -1,0 +1,85 @@
+@import '../../../styles/var';
+
+.my-bidding-performance-main {
+    height: 100%;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &__see-all {
+            color: $main-color;
+            text-decoration: underline;
+
+            & a {
+                color: $main-color !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    } 
+
+    &__content {
+        border-radius: $radius;
+        border: 1px solid $main-color;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        &__performance {
+            &__status {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                &__name {
+                    &-accepted {
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: $main-color;
+                    }
+                    &-rejected {
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: #EF8491;
+                    }
+                    &-pending {
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: black;
+                    }
+                }
+
+                &__percentage {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// custom
+:where(.css-dev-only-do-not-override-16qb6o5).ant-segmented {
+    background: none !important;
+}
+
+:where(.css-dev-only-do-not-override-16qb6o5).ant-segmented .ant-segmented-item-selected {
+    background-color: transparent !important;
+    color: $main-color !important;
+    font-weight: bold;
+    box-shadow: none !important;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        background-color: $main-color;
+        bottom: 0;
+        z-index: 100;
+        left: 0;
+        border-radius: 10px;
+    }
+}
