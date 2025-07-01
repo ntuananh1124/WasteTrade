@@ -72,13 +72,10 @@
         &__dropdown {
             display: none;
             position: absolute;
-            width: 100%;
+            width: 150px;
             z-index: 100;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            padding: 20px;
-            top: 99%;
+            top: calc(100% + 10px);
+            right: 0;
 
             &__auth {
                 @include d-flex();

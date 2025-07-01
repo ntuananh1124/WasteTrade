@@ -1,0 +1,26 @@
+@import '../../styles/var';
+@import '../../styles/mixins';
+
+.marketplace-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__top {
+        margin-top: 10px;
+    }
+
+    &__content {
+        &__filter {
+            background-color: $bg-color-one;
+            border-radius: 7px;
+            padding: 20px;
+        }
+    }
+}
+
+.custom-btn {
+    @include customBtn();
+    padding: 26px;
+    width: 100%;
+}

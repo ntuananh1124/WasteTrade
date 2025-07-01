@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useNavigate } from "react-router";
+import { Link, NavLink, Outlet } from "react-router";
 import { IoMenu } from "react-icons/io5";
 import logo from '../../images/logo-horizone.png';
 import { FaRegBell, FaRecycle } from "react-icons/fa";
@@ -7,10 +7,11 @@ import { CiUser } from "react-icons/ci";
 import { Avatar, Breadcrumb, Button, Layout, Menu, theme } from "antd";
 import { IoMdArrowDropdown, IoIosNotifications, IoIosCreate } from "react-icons/io";
 import { useEffect, useState } from "react";
-import { deleteAllCookies, getCookie } from "../../helpers/cookie";
+import { getCookie } from "../../helpers/cookie";
 import { MdOutlineDashboard, MdOutlineAddLocation } from "react-icons/md";
 import { RiFileList2Fill, RiListIndefinite } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
+import HeaderDropdownAcc from "../../components/HeaderDropdownAcc";
 const { Content, Footer, Sider } = Layout;
 
 export default function LayoutMain() {
@@ -20,12 +21,6 @@ export default function LayoutMain() {
     const [collapsed, setCollapsed] = useState(false);
 
     const token = getCookie('username');
-    const navigate = useNavigate();
-
-    const handleLogOut = () => {
-        deleteAllCookies();
-        navigate('/account/login');
-    };
 
     const items = [
         {
@@ -109,6 +104,7 @@ export default function LayoutMain() {
             a.removeEventListener('click', handleClick);
         };
         }
+        // eslint-disable-next-line
     }, []);
 
     return (
@@ -123,7 +119,7 @@ export default function LayoutMain() {
                         items={items}
                         // className="menu-style"
                         mode="inline"
-                        theme="light"
+                        // theme="light"
                     />
                 </Sider>
                 <Layout>
@@ -132,16 +128,14 @@ export default function LayoutMain() {
                             <div className="header__main__nav-logo" style={{position: 'relative'}}>
                                 <Button
                                     type="text"
-                                    icon={collapsed ? <IoMenu /> : <IoMenu />}
+                                    icon={<IoMenu />}
                                     onClick={() => setCollapsed(!collapsed)}
                                     style={{
                                         fontSize: '20px',
                                     }}
                                 />
                                 <div className="header__main__logo">
-                                    <Link to='/'>
-                                        <img src={logo} alt="WasteTrade" />
-                                    </Link>
+                                    <img src={logo} alt="WasteTrade" />
                                 </div>
                             </div>
                             <div className="header__main__buy-sell-want">
@@ -177,7 +171,7 @@ export default function LayoutMain() {
                                         </div>
                                     </div>
                                     <div id="b" className="header__main__dropdown">
-                                        <Button type="primary" onClick={handleLogOut}>Log Out</Button>
+                                        <HeaderDropdownAcc />
                                     </div>
                                 </div>
                                 <div className="header__main__noti">
@@ -197,13 +191,13 @@ export default function LayoutMain() {
                         </div>
                     </header>
                     <Content style={{ margin: '0 16px' }}>
-                        <Breadcrumb style={{ margin: '16px 0' }} items={[{ title: 'User' }, { title: 'Bill' }]}/>
+                        <Breadcrumb style={{ margin: '16px 0' }} items={[{ title: 'User' }]}/>
                         <main id='main' style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}>
+                            padding: 24,
+                            minHeight: 360,
+                            background: colorBgContainer,
+                            borderRadius: borderRadiusLG,
+                        }}>
                             <Outlet />
                         </main>
                     </Content>

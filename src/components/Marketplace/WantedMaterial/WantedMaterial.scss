@@ -1,31 +1,9 @@
 @import '../../../styles/var';
 @import '../../../styles/mixins';
 
-.material-interest-main {
-    &__top {
-        display: flex;
-        justify-content: space-between;
-
-        &__see-all {
-            color: $main-color;
-            text-decoration: underline;
-
-            & a {
-                color: $main-color !important;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-            }
-        }
-    } 
-
+.wanted-material-main {
     &__content {
-        border-radius: $radius;
-        background-color: #E7FBF3;
-        padding: 20px;
         margin-top: 20px;
-        
         &__inner {
             border: 1px solid $main-color;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -44,7 +22,7 @@
 
             &__status {
                 border-radius: 40px;
-                background-color: #E7FBF3;
+                background-color: #E2E2DF;
                 display: flex;
                 gap: 5px;
                 justify-content: center;
@@ -54,7 +32,7 @@
                 &__green {
                     width: 15px;
                     height: 15px;
-                    background-color: $main-color;
+                    background-color: #6A6A62;
                     border-radius: 50%;
                 }
 
@@ -71,6 +49,7 @@
 
                 & img {
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
@@ -80,7 +59,7 @@
             display: flex;
             flex-direction: column;
             flex-basis: 50%;
-            gap: 35px;
+            gap: 40px;
 
             &__head {
                 display: flex;
@@ -126,16 +105,6 @@
                     }
                 }
             }
-        }
-    }
-
-    &__bottom {
-        @include d-flex();
-        justify-content: flex-end;
-        margin-top: 20px;
-
-        & .custom-btn {
-            @include customBtn();
         }
     }
 }
